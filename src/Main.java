@@ -1,4 +1,4 @@
-import Ex2.Ex2;
+import Ex1.Ex1;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Ex2 esercizio = new Ex2();
+        Ex1 esercizio = new Ex1();
 
         int[] array = esercizio.getArray();
 

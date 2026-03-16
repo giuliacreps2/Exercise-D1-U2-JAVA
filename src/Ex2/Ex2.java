@@ -1,32 +1,78 @@
-//Esercizio #1
-//
-//Scrivere un programma che istanzi un array di 5 interi con valori casuali tra 1 e 10 e
-// lo stampi in console, chieda poi all'utente di inserire un numero in una posizione specificata
-// e stampi il nuovo stato dell'array, ripetere l'operazione fino a che l'utente non inserisce il valore 0.
-// Gestire eventuali errori dovuti alla violazione dei limiti dell'array.
+//Scrivere un programma che permetta di calcolare il numero di km/litro percorsi da un'auto.
+// Il programma riceve dall'utente il numero di km percorsi ed i litri di carburante consumati
+// e stampa i km/litro percorsi. Gestire per mezzo del try-catch l'eventualità che l'utente inserisca il valore 0
+// per il numero di litri consumati e venga generata una eccezione di divisione per zero.
+// Provare sia ad utilizzare interi sia double per capire come si comportino.
 // (Extra: Provare ad usare LogBack per stampare i messaggi di errore)
 
 package Ex2;
 
-import java.util.Random;
-
 public class Ex2 {
-    private int[] array;
+    private double kmPercorsi;
+    private double litri;
+
+    public Ex2(double kmPercorsi, double litri) {
+        this.kmPercorsi = kmPercorsi;
+        this.litri = litri;
+    }
 
     public Ex2() {
-        this.array = new int[5];
-        Random random = new Random();
-        for (int i = 0; i < array.length; i++) {
-            this.array[i] = random.nextInt(1, 11);
-        }
-
+        this.kmPercorsi = kmPercorsi;
+        this.litri = litri;
     }
 
-    public int[] getArray() {
-        return array;
+    public double getKmPercorsi() {
+        return kmPercorsi;
     }
 
-    public void setArray(int[] array) {
-        this.array = array;
+    public void setKmPercorsi(double kmPercorsi) {
+        this.kmPercorsi = kmPercorsi;
+    }
+
+    public double getLitri() {
+        return litri;
+    }
+
+    public void setLitri(double litri) {
+        this.litri = litri;
+    }
+
+    public double calcolaQuantiLitri(double kmPercorsi, double litri) {
+        return ((kmPercorsi / litri) * 100);
     }
 }
+
+
+//    private int kmPercorsi;
+//    private int litri;
+//
+//    public Ex2(int kmPercorsi, int litri) {
+//        this.kmPercorsi = kmPercorsi;
+//        this.litri = litri;
+//    }
+//
+//    public Ex2() {
+//        this.kmPercorsi = kmPercorsi;
+//        this.litri = litri;
+//    }
+//
+//    public int getKmPercorsi() {
+//        return kmPercorsi;
+//    }
+//
+//    public void setKmPercorsi(int kmPercorsi) {
+//        this.kmPercorsi = kmPercorsi;
+//    }
+//
+//    public int getLitri() {
+//        return litri;
+//    }
+//
+//    public void setLitri(int litri) {
+//        this.litri = litri;
+//    }
+//
+//    public int calcolaQuantiLitri(int kmPercorsi, int litri) {
+//        return ((kmPercorsi / litri) * 100);
+//    }
+//}
