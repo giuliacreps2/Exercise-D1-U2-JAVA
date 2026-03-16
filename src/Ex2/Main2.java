@@ -1,4 +1,4 @@
-import Ex2.Ex2;
+package Ex2;
 
 import java.util.Scanner;
 
@@ -21,6 +21,7 @@ public class Main2 {
                 esercizio.setLitri(litri);
 
                 double risultato = esercizio.calcolaQuantiLitri(km, litri);
+                if (Double.isInfinite(risultato)) throw new ArithmeticException("Non si può dividere per 0");
                 System.out.println(risultato);
 
 
